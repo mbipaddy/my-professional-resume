@@ -9,7 +9,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Clone the code
-              uses: actions/checkout@va
+              uses: actions/checkout@v4
             - name: Build image
               run:
                 docker build -it mbipaddy/cicd-portfolio .
