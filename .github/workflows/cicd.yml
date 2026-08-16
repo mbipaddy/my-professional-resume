@@ -32,6 +32,12 @@ jobs:
                 ignore-unifixed: true
                 severity: CRITICAL,HIGH
 
-            - name: Push image to ECR
-              run: echo "push"
+            - name: Configure AWS credentials
+              uses: aws-actions/configure-aws-credentials@v4 # More information on this action can be found below in the 'AWS Credentials' section
+              with:
+                role-to-assume: arn:aws:iam::292398627491:role/github-action-role
+                aws-region: aws-region-1
 
+            - name: Login to Amazon ECR
+              id: login-ecr
+              uses: aws-actions/amazon-ecr-login@v2
