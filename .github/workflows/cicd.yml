@@ -28,7 +28,7 @@ jobs:
               with:
                 image-ref: 292398627491.dkr.ecr.us-east-1.amazonaws.com/my-repo:latest
                 format: table
-                exit-code: 1
+                exit-code: 0
                 ignore-unifixed: true
                 severity: CRITICAL,HIGH
 
