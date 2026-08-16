@@ -40,7 +40,12 @@ jobs:
               uses: aws-actions/configure-aws-credentials@v4 
               with:
                 aws-region: us-east-1
-                role-to-assume: arn:aws:iam::292398627491:role/ecr-action-role                
+                role-to-assume: arn:aws:iam::292398627491:role/ecr-action-role 
+                
+            - name: Show GitHub OIDC claims
+              uses: github/actions-oidc-debugger@main
+              with:
+               audience: sts.amazonaws.com               
 
             - name: Login to Amazon ECR
               id: login-ecr
