@@ -51,8 +51,8 @@ jobs:
 
     
     Deploy_to_ecs:
-        needs: build_scan
-        
+        needs: built_Scan
+
         runs-on: ubuntu-latest
         
         steps:
